@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aplicación para agregar, editar y eliminar tareas, hecha con JavaScript ES6+ y programación orientada a objetos.">
+  <title>Gestor de Tareas</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app">
+    <header class="app-header">
+      <h1>Gestor de Tareas</h1>
+      <p class="subtitulo">Organiza tu día: agrega, edita, completa y elimina tareas.</p>
+    </header>
+
+    <!-- Formulario para agregar nuevas tareas -->
+    <form id="form-tarea" class="form-tarea" novalidate>
+      <label for="input-tarea" class="visually-hidden">Nueva tarea</label>
+      <input type="text" id="input-tarea" class="input-tarea"
+             placeholder="Escribe una nueva tarea..." maxlength="100"
+             autocomplete="off" aria-describedby="mensaje-error">
+      <button type="submit" id="btn-agregar" class="btn btn-agregar">Agregar Tarea</button>
+    </form>
+    <p id="mensaje-error" class="mensaje-error" role="alert" aria-live="assertive"></p>
+
+    <!-- Resumen de tareas -->
+    <p id="contador" class="contador" aria-live="polite"></p>
+
+    <!-- Lista donde JavaScript inserta las tareas -->
+    <ul id="lista-tareas" class="lista-tareas"></ul>
+
+    <p id="lista-vacia" class="lista-vacia">No hay tareas todavía. ¡Agrega la primera!</p>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
